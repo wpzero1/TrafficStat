@@ -17,7 +17,7 @@ public class stat {
 						in = new BufferedReader(new FileReader("TrafficStat2017.csv"));
 						out = new BufferedWriter(new FileWriter("NewTrafficStat2017.txt")); //새로운 newdata.txt에 출력
 						
-						String data = in.readLine();  //yyyyyy데이터 입출력은 항상 불안정해서 항상 try catch 처리(예외) 해줘야함
+						String data = in.readLine();  //데이터 입출력은 항상 불안정해서 항상 try catch 처리(예외) 해줘야함
 						String[] array = data.split(",");
 											
 							while(data != null) { //조건문을 넣어야하지. 그리고 업데이트가 필요함(또 읽어야지)
