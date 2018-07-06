@@ -15,25 +15,25 @@ public class stat {
 								
 					try {
 						in = new BufferedReader(new FileReader("TrafficStat2017.csv"));
-						out = new BufferedWriter(new FileWriter("NewTrafficStat2017.txt")); //»õ·Î¿î newdata.txt¿¡ Ãâ·Â
+						out = new BufferedWriter(new FileWriter("NewTrafficStat2017.txt")); //ìƒˆë¡œìš´ newdata.txtì— ì¶œë ¥
 						
-						String data = in.readLine();  //µ¥ÀÌÅÍ ÀÔÃâ·ÂÀº Ç×»ó ºÒ¾ÈÁ¤ÇØ¼­ Ç×»ó try catch Ã³¸®(¿¹¿Ü) ÇØÁà¾ßÇÔ
+						String data = in.readLine();  //yyyyyyë°ì´í„° ì…ì¶œë ¥ì€ í•­ìƒ ë¶ˆì•ˆì •í•´ì„œ í•­ìƒ try catch ì²˜ë¦¬(ì˜ˆì™¸) í•´ì¤˜ì•¼í•¨
 						String[] array = data.split(",");
 											
-							while(data != null) { //Á¶°Ç¹®À» ³Ö¾î¾ßÇÏÁö. ±×¸®°í ¾÷µ¥ÀÌÆ®°¡ ÇÊ¿äÇÔ(¶Ç ÀĞ¾î¾ßÁö)
+							while(data != null) { //ì¡°ê±´ë¬¸ì„ ë„£ì–´ì•¼í•˜ì§€. ê·¸ë¦¬ê³  ì—…ë°ì´íŠ¸ê°€ í•„ìš”í•¨(ë˜ ì½ì–´ì•¼ì§€)
 							
 							for (int i=0; i<array.length;i++) {
 									System.out.println(array[i]); 
 								
 							out.write(data);
 							
-							out.newLine(); //»õ·Î¿î ¶óÀÎ Ãß°¡(¿£ÅÍÅ° ¹İ¿µ). ±×¸®°í ¸¶Áö¸·²¨ Ä¥ ¶§ ¿£ÅÍ 2¹ø Ä¡±â
+							out.newLine(); //ìƒˆë¡œìš´ ë¼ì¸ ì¶”ê°€(ì—”í„°í‚¤ ë°˜ì˜). ê·¸ë¦¬ê³  ë§ˆì§€ë§‰êº¼ ì¹  ë•Œ ì—”í„° 2ë²ˆ ì¹˜ê¸°
 							
-							System.out.println(data); //ÄÜ¼ÖÃ¢ Ãâ·Â
+							System.out.println(data); //ì½˜ì†”ì°½ ì¶œë ¥
 							
 							data = in.readLine();
 							
-							out.flush(); //µ¥ÀÌÅÍ ¼Õ½Ç ¹æÁö¸¦ À§ÇØ¼­ ¸ñÀûÁö¿¡ µ¥ÀÌÅÍ Ãâ·Â º¸Àå
+							out.flush(); //ë°ì´í„° ì†ì‹¤ ë°©ì§€ë¥¼ ìœ„í•´ì„œ ëª©ì ì§€ì— ë°ì´í„° ì¶œë ¥ ë³´ì¥
 							}
 						}
 					
@@ -41,8 +41,8 @@ public class stat {
 						e.printStackTrace();
 					} finally {
 						try {
-							in.close();  //»ç¿ëÇß´ø ½Ã½ºÅÛ ÀÚ¿ø ¹İÈ¯. ±Ùµ¥ ¿¹¿ÜÃ³¸®
-							out.close(); //out¿¡¼­ Ãß°¡ÇØ¾ßÇÔ
+							in.close();  //ì‚¬ìš©í–ˆë˜ ì‹œìŠ¤í…œ ìì› ë°˜í™˜. ê·¼ë° ì˜ˆì™¸ì²˜ë¦¬
+							out.close(); //outì—ì„œ ì¶”ê°€í•´ì•¼í•¨
 						} catch (IOException e) {
 							e.printStackTrace();
 						}
