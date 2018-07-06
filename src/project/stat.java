@@ -11,7 +11,7 @@ public class stat {
 	public static void main(String[] args) {
 				
 					BufferedReader in = null;
-					BufferedWriter out = null;
+					BufferedWriter out = null;   
 								
 					try {
 						in = new BufferedReader(new FileReader("TrafficStat2017.csv"));
